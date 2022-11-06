@@ -3,10 +3,10 @@ print("Welcome to my program that will find the vectorial ofyour number", end="\
 print("But you must write only positive numbers and only natural numbers", end="\n")
 print("Let's start", end="\n")
 YourNumber=int(input("Enter your number:"))
-f=1
+facteril=1
 while YourNumber>1:
-    f*=YourNumber
+    facteril*=YourNumber
     YourNumber=YourNumber-1
-print(f)
+print(facteril)
 print("You are great!:3")
     
