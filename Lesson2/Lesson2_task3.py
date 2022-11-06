@@ -1,7 +1,8 @@
 Yournumber=int(input("Enter your number: "))
-Whatwewillcount=Yournumber-1
-element=float
-for element in range(Yournumber, Whatwewillcount): 
-    string=element
-    print(element)
+while Yournumber>0:
+    for row in range(-Yournumber,0):
+        print(-row,end=" ")
+    print()
+    Yournumber=Yournumber-1
+
 
