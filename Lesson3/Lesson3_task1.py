@@ -7,32 +7,29 @@ print("- =it is subtraction", end="\n")
 print("* =it is multiplication", end="\n")
 print("/ =it is division", end="\n")
 print("You must use two numbers")
-Number1=float(input("Enter your fist number: "))
-Number2=float(input("Enter your secomd number: "))
-Youraction=input("Choose your action: ")
-def Sum():
-        Yoursum=int(Number1+Number2)
-        return Yoursum
-def Diff():
-    Yourdiff=int(Number1-Number2)
-    return Yourdiff
-def Plural():
-    YourPlural=int(Number1*Number2)
-    return YourPlural
-def Division():
-    YourDivision=int(Number1/Number2)
-    return YourDivision
-if Youraction== '+':
-    print("Your result: "+ str(Sum()))
-elif Youraction== '-':
-    print("Your result: "+ str(Diff()))
-elif Youraction== '*':
-     print("Your result: "+ str(Plural()))
-elif Youraction== '/':
-    print("Your result: "+ str(Division()))
-else:
-    print("Error")
-print("You are great!:3")
+first=0
+second=0
+act=0
+result=0
+def numbers():
+    first=int(input("Your first number: "))
+    second=int(input("Your second number: "))
+    return [first,second]
+def action():
+    numberlist=numbers()
+    act=str(input("Enter your action"))
+    if act=='+':
+        result=numberlist[0]+numberlist[1]
+    if act=='-':
+        result=numberlist[0]-numberlist[1]
+    if act=='*':
+        result=numberlist[0]*numberlist[1]
+    if act=='/':
+        result=numberlist[0]/numberlist[1]
+    print(result)
+    
 
+action()
 
+       
 
