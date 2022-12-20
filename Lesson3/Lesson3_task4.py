@@ -6,14 +6,13 @@ if Number[0] in Mastercard and len(Number)==16:
     for index in range(0,len(Number),2):
         Yournumber.append(int(Number[index])*2)
     firstaction=Yournumber
-    for i in str(firstaction):
-        for element in list(i):
-            Yournumber2.append(int(element))
-    secondaction=sum(Yournumber2)       
+    for element in Yournumber:
+        element=str(Yournumber)
 
-print(firstaction)
-        
-       
+print(firstaction, secondaction)
+               
+
+
         
 
 
