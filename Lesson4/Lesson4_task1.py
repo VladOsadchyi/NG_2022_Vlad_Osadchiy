@@ -1,9 +1,14 @@
 import platform
 import psutil
+def file():
+      with open(r"out.text.txt", "w") as file:
+        for element in massive2:
+          file.write(element+'\n')
+      file.close()
 print("Hi me dear friend!\n This program will give the information about your computer\n Punkts of it you will see now")
 options={
   "a-CPU"
-  "b- RAM"
+  "b-RAM"
   "c-Architecture"
   "d-CPU Family"
   "y-Proceed"
@@ -16,6 +21,8 @@ punkts={
   "d":False,
   "y":False
 }
+massive=[]
+
 while True:
   if punkts["y"]:break
   desire=input("Enter your desires: ").split(",")
@@ -23,13 +30,24 @@ while True:
     if punkts[element]==False:
        punkts[element]=True
     if element=='a':
-      print("Your CPU: "+platform.processor().split(" ")[0])
+      result=platform.processor().split(" ")[0]
+      print("Your CPU: "+result)
     if element=='b':
       memory=psutil.virtual_memory()
-      memory2=round(float(memory.total / 1073741824), 2)
-      print("Your RAM: ",memory2)
+      result=str(round(float(memory.total / 1073741824), 2))
+      print("Your RAM:"+result)    
     if element=='c':
-      print("Architecture: "+platform.architecture()[0])
+      result=platform.architecture()[0]
+      print("Architecture:"+result)     
     if element=='d':
-      print("CPU Family: "+platform.machine())
+      result=platform.processor().split(" ")[2]
+      print("CPU Family:"+result)
+    if punkts[element]==True:
+          massive.append(result)
+    if punkts[element]==True:
+          massive.append(result)
+          massive2=set(massive)
+
+file()
+
 print(punkts)
