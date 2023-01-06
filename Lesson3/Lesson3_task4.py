@@ -7,8 +7,7 @@ if Number[0] in Mastercard and len(Number)==16:
         Yournumber.append(int(Number[index])*2)
     firstaction=Yournumber
     for element in Yournumber:
-        element=str(Yournumber)
-
+        
 print(firstaction, secondaction)
                
 
