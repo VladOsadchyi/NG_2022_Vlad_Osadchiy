@@ -2,7 +2,7 @@ import platform
 import psutil
 def file():
       with open(r"out.text.txt", "w") as file:
-        for element in massive2:
+        for element in elforcycle:
           file.write(element+'\n')
       file.close()
 print("Hi me dear friend!\n This program will give the information about your computer\n Punkts of it you will see now")
@@ -21,7 +21,7 @@ punkts={
   "d":False,
   "y":False
 }
-massive=[]
+allelements=[]
 
 while True:
   if punkts["y"]:break
@@ -43,10 +43,10 @@ while True:
       result=platform.processor().split(" ")[2]
       print("CPU Family:"+result)
     if punkts[element]==True:
-          massive.append(result)
+          allelements.append(result)
     if punkts[element]==True:
-          massive.append(result)
-          massive2=set(massive)
+          allelements.append(result)
+          elforcycle=set(allelements)
 
 file()
 
